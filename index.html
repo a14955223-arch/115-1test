@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>臺東縣成功鎮三民國小一一四學年度第一學期期中評量試卷 三年級 社會領域</title>
+    <title>臺東縣成功鎮三民國小一一五學年度第一學期期中評量試卷 三年級自然</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
@@ -25,11 +25,8 @@
             --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
         }
-        * {
-            box-sizing: border-box;
-        }
         body {
-            font-family: "LXGW WenKai TC", cursive, sans-serif;
+            font-family: "LXGW WenKai TC", cursive;
             background-color: var(--background);
             display: flex;
             align-items: flex-start;
@@ -50,30 +47,27 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            margin: auto;
         }
         .navbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.85rem 1.25rem;
+            padding: 0.75rem 1.25rem;
             background-color: var(--surface);
             border-bottom: 1px solid var(--border);
             gap: 1rem;
             flex-wrap: wrap;
         }
         .logo {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 800;
             color: var(--primary);
-            letter-spacing: 0.03em;
-            line-height: 1.4;
+            letter-spacing: 0.05em;
         }
         .nav-right {
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            flex-wrap: wrap;
         }
         .nav-pager {
             display: flex;
@@ -120,7 +114,7 @@
             cursor: pointer;
             outline: none;
             transition: border-color 0.2s;
-            max-width: 220px;
+            max-width: 180px;
         }
         .select-wrapper select:focus {
             border-color: var(--primary);
@@ -140,7 +134,7 @@
             background: transparent;
             font-size: 1rem;
             padding-right: 1.5rem;
-            max-width: 170px;
+            max-width: 180px;
         }
         .select-q::after {
             right: 0.4rem;
@@ -160,7 +154,7 @@
         .btn-primary {
             background-color: var(--primary);
             color: white;
-            box-shadow: 0 2px 4px rgb(15 118 110 / 0.15);
+            box-shadow: 0 2px 4px rgb(15 118 110 / 0.1);
         }
         .btn-primary:hover {
             background-color: var(--primary-hover);
@@ -245,20 +239,20 @@
             min-width: 2.5rem;
         }
         #quiz-area {
-            padding: 1.5rem 1.25rem;
+            padding: 1.25rem;
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
-            min-height: 280px;
+            gap: 1rem;
+            min-height: 260px;
             background-color: var(--surface);
         }
         #preamble-text {
             background-color: var(--background);
             border: 1px solid var(--border);
-            border-radius: 0.65rem;
-            padding: 1rem 1.25rem;
-            font-size: 1.05rem;
-            line-height: 1.75;
+            border-radius: 0.5rem;
+            padding: 0.875rem 1.125rem;
+            font-size: 1rem;
+            line-height: 1.7;
             color: var(--text-muted);
             white-space: pre-wrap;
         }
@@ -274,8 +268,8 @@
             gap: 0.75rem;
         }
         #question-text {
-            font-size: 1.2rem;
-            line-height: 1.7;
+            font-size: 1.15rem;
+            line-height: 1.6;
             font-weight: 700;
             color: var(--text-main);
             white-space: pre-wrap;
@@ -287,14 +281,14 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 0.65rem;
         }
         .option-item {
-            font-size: 1.08rem;
-            line-height: 1.55;
+            font-size: 1.05rem;
+            line-height: 1.5;
             border: 1px solid var(--border);
-            padding: 0.85rem 1.15rem;
-            border-radius: 0.6rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
             background-color: var(--surface);
             box-shadow: var(--shadow);
             cursor: pointer;
@@ -304,34 +298,28 @@
             background-color: var(--highlight-bg);
             border-color: var(--primary);
         }
-        #preamble-text span, #question-text span.non-option {
-            cursor: pointer;
-            border-radius: 4px;
-            padding: 1px 3px;
-            transition: background-color 0.15s;
-        }
         .speaking, .speaking:hover {
             text-decoration: underline;
             text-decoration-color: var(--highlight-underline);
             text-decoration-thickness: 3px;
-            background-color: var(--highlight-bg) !important;
+            background-color: var(--highlight-bg);
         }
         footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.85rem 1.25rem;
+            padding: 0.75rem 1.25rem;
             border-top: 1px solid var(--border);
             background-color: var(--background);
             flex-wrap: wrap;
             gap: 0.75rem;
         }
         .footer-text {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             margin: 0;
         }
-        @media (max-width: 640px) {
+        @media (max-width: 600px) {
             body {
                 padding: 0.25rem;
             }
@@ -339,13 +327,13 @@
                 border-radius: 0.5rem;
             }
             .navbar {
-                padding: 0.65rem 0.85rem;
+                padding: 0.5rem 0.75rem;
             }
             .logo {
                 font-size: 1.05rem;
             }
             .nav-pager {
-                padding: 0.15rem;
+                padding: 0.125rem;
             }
             .select-wrapper select {
                 font-size: 0.85rem;
@@ -355,22 +343,25 @@
                 max-width: 120px;
             }
             .btn-primary, .btn-secondary {
-                padding: 0.4rem 0.7rem;
+                padding: 0.375rem 0.65rem;
                 font-size: 0.85rem;
             }
+            .btn-primary span {
+                display: none;
+            }
             #quiz-area {
-                padding: 1rem 0.85rem;
-                min-height: 220px;
+                padding: 0.75rem;
+                min-height: 200px;
             }
             #question-text {
                 font-size: 1.05rem;
             }
             .option-item {
-                font-size: 0.98rem;
-                padding: 0.7rem 0.85rem;
+                font-size: 0.95rem;
+                padding: 0.6rem 0.75rem;
             }
             footer {
-                padding: 0.65rem 0.85rem;
+                padding: 0.5rem 0.75rem;
                 flex-direction: column;
                 text-align: center;
             }
@@ -381,7 +372,7 @@
     <div id="app-container">
         <header class="navbar">
             <div class="nav-left">
-                <span class="logo">臺東縣成功鎮三民國小一一四學年度第一學期期中評量試卷 三年級 社會領域</span>
+                <span class="logo">臺東縣成功鎮三民國小一一五學年度第一學期期中評量試卷 三年級自然</span>
             </div>
             <div class="nav-right">
                 <div class="nav-pager">
@@ -433,309 +424,286 @@
             <p class="footer-text">© 2026 spedmix</p>
         </footer>
     </div>
-
     <script>
         const questions = [
             {
-                "section": "一、是非題",
+                "section": "是非題",
                 "displayId": "1",
                 "preamble": null,
-                "question": "1. 每個人的家庭成員一定都有爸爸、媽媽、哥哥和妹妹。",
-                "options": null
+                "question": "1. 榕樹和仙丹花不會移動，屬於非生物；蝴蝶和鳥會飛，屬於生物。",
+                "options": ["(O) 是", "(X) 否"]
             },
             {
-                "section": "一、是非題",
+                "section": "是非題",
                 "displayId": "2",
                 "preamble": null,
-                "question": "2. 親人之間不同的稱呼,和長幼順序無關。",
-                "options": null
+                "question": "2. 大花咸豐草的莖屬於木本莖，特徵是莖細而柔軟，與樹木相比也比較矮小。",
+                "options": ["(O) 是", "(X) 否"]
             },
             {
-                "section": "一、是非題",
+                "section": "是非題",
                 "displayId": "3",
                 "preamble": null,
-                "question": "3. 身為小學生的我只要好好讀書就好了,不必分擔家事。",
-                "options": null
+                "question": "3. 昆蟲到花朵上採集花蜜，可以幫助植物繁衍後代。",
+                "options": ["(O) 是", "(X) 否"]
             },
             {
-                "section": "一、是非題",
+                "section": "是非題",
                 "displayId": "4",
                 "preamble": null,
-                "question": "4. 「百善孝為先」說明了孝敬父母和長輩是我們社會所推崇的美德。",
-                "options": null
+                "question": "4. 對物體用力後，物體會改變形狀或位置，例如用力擠壓膠泥，膠泥會變形；用力推球，球會滾動。",
+                "options": ["(O) 是", "(X) 否"]
             },
             {
-                "section": "一、是非題",
+                "section": "是非題",
                 "displayId": "5",
                 "preamble": null,
-                "question": "5. 我不喜歡這次班上選舉班級幹部的結果,所以我可以不服從。",
-                "options": null
+                "question": "5. 因為鉛筆很輕，所以拿鉛筆時不會用到力。",
+                "options": ["(O) 是", "(X) 否"]
             },
             {
-                "section": "一、是非題",
+                "section": "是非題",
                 "displayId": "6",
                 "preamble": null,
-                "question": "6. 在電腦教室查資料時,必須遵守使用規範,不可以一邊吃東西邊用電腦。",
-                "options": null
+                "question": "6. 通常磁鐵隔著較薄的物品，仍然具有磁力。",
+                "options": ["(O) 是", "(X) 否"]
             },
             {
-                "section": "一、是非題",
+                "section": "是非題",
                 "displayId": "7",
                 "preamble": null,
-                "question": "7. 家中如果有新生兒出生,會使家庭成員的人數減少。",
-                "options": null
+                "question": "7. 磁鐵有兩極，只有其中一個磁極可以吸引鐵製品。",
+                "options": ["(O) 是", "(X) 否"]
             },
             {
-                "section": "一、是非題",
+                "section": "是非題",
                 "displayId": "8",
                 "preamble": null,
-                "question": "8. 親切的稱呼和問候比較容易拉近與鄰居的關係。",
-                "options": null
+                "question": "8. 一朵花的基本構造有花粉、花瓣、花萼和花梗。",
+                "options": ["(O) 是", "(X) 否"]
             },
             {
-                "section": "一、是非題",
+                "section": "是非題",
                 "displayId": "9",
                 "preamble": null,
-                "question": "9. 家庭生活中的食、衣、住、行、育、樂,樣樣都需要花費。",
-                "options": null
+                "question": "9. 植物在莖的同一個節上只長出一片葉子，它們在枝條上一左一右交錯生長，這種葉子生長方式稱為互生。",
+                "options": ["(O) 是", "(X) 否"]
             },
             {
-                "section": "一、是非題",
+                "section": "是非題",
                 "displayId": "10",
                 "preamble": null,
-                "question": "10. 和家人相處時遵守應有的倫理,才能維持良好的關係。",
-                "options": null
+                "question": "10. 打掃時，可以利用水柱將地面的髒汙沖走，是因為水柱具有彈力。",
+                "options": ["(O) 是", "(X) 否"]
             },
             {
-                "section": "一、是非題",
-                "displayId": "11",
-                "preamble": null,
-                "question": "11. 由抽籤決定班長的人選是最公平的方式。",
-                "options": null
-            },
-            {
-                "section": "一、是非題",
-                "displayId": "12",
-                "preamble": null,
-                "question": "12. 學校的電動門啟動時,我可以和同學比賽誰先在關門前跑出校門。",
-                "options": null
-            },
-            {
-                "section": "二、選擇題",
+                "section": "選擇題",
                 "displayId": "1",
                 "preamble": null,
-                "question": "1. 舅媽生了一個小女孩,我應該怎麼稱呼她?",
+                "question": "1. 下列是小雯的校園觀察紀錄表內容，請問哪一項內容不正確？",
                 "options": [
-                    "①表妹",
-                    "②表弟",
-                    "③堂妹",
-                    "④堂姐。"
+                    "① 鐵椅屬於非生物",
+                    "② 榕樹屬於非生物",
+                    "③ 蝴蝶屬於動物",
+                    "④ 仙丹花屬於植物"
                 ]
             },
             {
-                "section": "二、選擇題",
+                "section": "選擇題",
                 "displayId": "2",
                 "preamble": null,
-                "question": "2. 校園中不同的空間,提供學生不同的學習活動,下列哪一項敘述正確?",
+                "question": "2. 下列哪一個敘述中，只有包含生物？",
                 "options": [
-                    "①圖書館適合打球",
-                    "②操場適合讀書",
-                    "③校園施工的工地適合玩捉迷藏",
-                    "④教室適合下棋。"
+                    "① 攀木蜥蜴攀附在樹幹上",
+                    "② 桌上放了一杯熱茶",
+                    "③ 魚在水池裡游來游去",
+                    "④ 衣櫃裡有許多衣服"
                 ]
             },
             {
-                "section": "二、選擇題",
+                "section": "選擇題",
                 "displayId": "3",
                 "preamble": null,
-                "question": "3. 選舉班級幹部時,下列哪一種態度是正確的?",
+                "question": "3. 下面哪一種植物葉子的外形是掌形的？",
                 "options": [
-                    "①女生較細心,所以要選女生當幹部",
-                    "②一定要選自己的好朋友",
-                    "③選擇有能力且願意替大家服務的同學",
-                    "④選功課最好的人擔任。"
+                    "① 彩葉草葉片",
+                    "② 百合葉",
+                    "③ 洋紫荊",
+                    "④ 構樹葉"
                 ]
             },
             {
-                "section": "二、選擇題",
+                "section": "選擇題",
                 "displayId": "4",
                 "preamble": null,
-                "question": "4. 怎樣的行為才算是服務社會的具體行動?",
+                "question": "4. 下面是四種植物的根，請問哪一種植物的根屬於軸根？",
                 "options": [
-                    "①攀折花草樹木",
-                    "②欺負小動物",
-                    "③考試考零分",
-                    "④讓座給需要的人。"
+                    "① 1",
+                    "② 2",
+                    "③ 3",
+                    "④ 4"
                 ]
             },
             {
-                "section": "二、選擇題",
+                "section": "選擇題",
                 "displayId": "5",
                 "preamble": null,
-                "question": "5. 全家人共同儲蓄的好處是什麼??",
+                "question": "5. 下列物品中，哪一項不是利用植物做成的？",
                 "options": [
-                    "①讓全家人只能在家活動",
-                    "②家庭急需用錢時可以支付",
-                    "③孩子考試容易得一百分",
-                    "④家人不會生病。"
+                    "① 紙張",
+                    "② 衣服",
+                    "③ 花生油",
+                    "④ 塑膠椅"
                 ]
             },
             {
-                "section": "二、選擇題",
+                "section": "選擇題",
                 "displayId": "6",
                 "preamble": null,
-                "question": "6. 下列哪一個原因可能會使得家庭成員的組成產生變化?",
+                "question": "6. 下列哪一種用力方式會改變物體的形狀？",
                 "options": [
-                    "①爸爸出差",
-                    "②媽媽生了一個妹妹",
-                    "③姐姐出國念書",
-                    "④弟弟參加夏令營。"
+                    "① 將桌子往上抬高",
+                    "② 推球",
+                    "③ 擰乾抹布",
+                    "④ 提起水桶"
                 ]
             },
             {
-                "section": "二、選擇題",
+                "section": "選擇題",
                 "displayId": "7",
                 "preamble": null,
-                "question": "7. 下列敘述哪一項正確?",
+                "question": "7. 下列哪一項不屬於力的三要素？",
                 "options": [
-                    "①每一個人的家庭組成成員都是一樣的",
-                    "②家庭的組成成員是固定的,不會發生變化",
-                    "③我的爸媽在外地工作,我和爺爺一起住,所以只有爺爺才是我的家人",
-                    "④不管家庭成員有哪些人,都應該珍惜並愛護他們。"
+                    "① 力的大小",
+                    "② 力的方向",
+                    "③ 力的快慢",
+                    "④ 力的作用點"
                 ]
             },
             {
-                "section": "二、選擇題",
+                "section": "選擇題",
                 "displayId": "8",
                 "preamble": null,
-                "question": "8. 下列哪一個選項可以用來稱呼爸爸的弟弟?",
+                "question": "8. 將兩個磁鐵的相同磁極互相靠近，會產生什麼現象？",
                 "options": [
-                    "①舅舅",
-                    "②叔叔",
-                    "③表哥",
-                    "④爺爺。"
+                    "① 互相吸引",
+                    "② 互相排斥",
+                    "③ 磁鐵斷裂",
+                    "④ 不一定"
                 ]
             },
             {
-                "section": "二、選擇題",
+                "section": "選擇題",
                 "displayId": "9",
                 "preamble": null,
-                "question": "9. 下列哪一項不是保障家庭生活安定的做法?",
+                "question": "9. 把磁鐵放入不透明的袋子中，再靠近鐵粉，觀察磁鐵吸引鐵粉的情形，可以知道磁鐵的哪一種特性？",
                 "options": [
-                    "①買文具用品夠用就好",
-                    "②平時養成儲蓄的習慣",
-                    "③有錢就花掉",
-                    "④不買不必要的東西。"
+                    "① 磁鐵可以吸引鐵製的物品",
+                    "② 磁鐵的使用壽命",
+                    "③ 磁鐵的價格",
+                    "④ 磁鐵的顏色"
                 ]
             },
             {
-                "section": "二、選擇題",
+                "section": "選擇題",
                 "displayId": "10",
                 "preamble": null,
-                "question": "10. 下列哪一項屬於家庭倫理的範圍?",
+                "question": "10. 船能夠航行於海上，是利用水的哪一種特性？",
                 "options": [
-                    "①搶救環境人人有責",
-                    "②遵守交通規則",
-                    "③子女孝敬父母",
-                    "④上課不遲到不早退"
+                    "① 壓力",
+                    "② 磁力",
+                    "③ 浮力",
+                    "④ 熱力"
                 ]
             },
             {
-                "section": "二、選擇題",
-                "displayId": "11",
-                "preamble": null,
-                "question": "11. 下列哪一項不是我們經由開班會可以學習到的能力?",
-                "options": [
-                    "①培養為同學服務的精神",
-                    "②吵架的技巧",
-                    "③學習民主生活應有的態度",
-                    "④勇於表達自己的想法。"
-                ]
-            },
-            {
-                "section": "二、選擇題",
-                "displayId": "12",
-                "preamble": null,
-                "question": "12. 放學時,大家一起下樓準備回家,要如何做才能降低意外發生的機會?",
-                "options": [
-                    "①跳著下樓梯,以免遲到。",
-                    "②跟同學比賽看誰先跑到一樓",
-                    "③坐在扶杆上滑下去",
-                    "④大家靠邊慢慢走下樓"
-                ]
-            },
-            {
-                "section": "三、連連看",
+                "section": "填填看",
                 "displayId": "1",
-                "preamble": "①能夠懷念祖先的恩情  ●甲、愛書\n②溫柔又大方  ●乙、俊明\n③英俊又聰明  ●丙、念祖\n④成為愛讀書的人  ●丁、美秀\n⑤美麗又秀氣  ●戊、柔芳",
-                "question": "1. 名字的意義,是家人和長輩們想出來的。請你把適當的意義和相關的名字畫線連起來。",
+                "preamble": "(1) ( )\n(2) ( )\n(3) ( )",
+                "question": "1. 鳳仙花的根、莖、葉分別在哪裡？請將正確名稱寫在( )中。\n(1) ( )\n(2) ( )\n(3) ( )",
                 "options": null
             },
             {
-                "section": "三、連連看",
-                "displayId": "2",
-                "preamble": "①爸爸的爸爸  ●甲、表弟\n②媽媽的姐妹  ●乙、舅舅\n③姑姑的兒子  ●丙、阿姨\n④爸爸的哥哥  ●丁、爺爺\n⑤媽媽的弟弟  ●戊、伯伯",
-                "question": "2. 你知道下列這些人要如何稱呼嗎?請畫線連起來",
+                "section": "填填看",
+                "displayId": "2-(1)",
+                "preamble": "代號填入 ( ) 中。\nA.新臺幣十元硬幣 (圓拾 10)\nB.鉛筆\nC.圖釘\nD.玻璃瓶\nE.鐵製便當盒\nF.鐵湯匙\nG.橡皮擦\nH.鐵叉子",
+                "question": "2. 看圖回答問題，請將正確答案的代號填入( )中。\n(1) 哪些物品可以被磁鐵吸引？( )",
                 "options": null
             },
             {
-                "section": "四、排出正確的順序",
-                "displayId": "1",
-                "preamble": "甲、宣布當選人\n乙、附議\n丙、提名\n丁、表決",
-                "question": "1. 請你利用代號排列出選舉班級幹部的程序\n答:( )",
-                "options": null
-            },
-            {
-                "section": "五、配合題",
-                "displayId": "1",
-                "preamble": "甲、父母  乙、長輩  丙、姓  丁、名字  戊、取笑  己、尊重",
-                "question": "1. 請從下列選項中找出正確答案填入( )中。\n開學了,老師要我們自我介紹,老師說:姓名是我們的代表,「姓」是依據①( )的姓,「名字」是父母或②( )仔細考慮後取的,原住民族不一定有③( ),但是不論是哪一種命名方式,都代表家人對我們的期待,所以我們要好好珍惜自己的姓名,也要④( )別人的姓名。",
-                "options": null
-            },
-            {
-                "section": "五、配合題",
-                "displayId": "2",
-                "preamble": "甲、班會  乙、附議  丙、報告事項  丁、班級公約  戊、主席",
-                "question": "2. 請將下列答案填入適當的( )中\n①在班會討論時,如果要發言,一定要經過( )同意後,才可以發言。\n②( )是班上同學共同討論及表決後,所做出的約定。\n③在班會中,主席和班級幹部都要提出( )。\n④班會討論過程中,有人提議後,需要有人( ),才能繼續討論。\n⑤( )是全班同學討論事情的集會。",
-                "options": null
-            },
-            {
-                "section": "六、勾選題",
-                "displayId": "1",
+                "section": "填填看",
+                "displayId": "2-(2)",
                 "preamble": null,
-                "question": "1. 校園中哪些場所可能發生危險?請在正確的□中打ˇ。\n□ ①偏僻的空教室。\n□ ②無人的地下室。\n□ ③施工中的工地。\n□ ④停車場。\n□ ⑤下雨後溼滑的走廊。",
+                "question": "2. 看圖回答問題，請將正確答案的代號填入( )中。\n(2) 哪些物品不能被磁鐵吸引？( )",
                 "options": null
             },
             {
-                "section": "七、活用題",
-                "displayId": "1",
+                "section": "填填看",
+                "displayId": "2-(3)",
                 "preamble": null,
-                "question": "1. 下列哪些是節省家庭消費的方法?請在正確的( )中打ˇ,錯誤的打✕。\n( )①每天都去外面買昂貴的料理。\n( )②出門自己帶開水,少買飲料。\n( )③不管目的地的遠近,都要坐計程車。\n( )④電視廣告的新產品,不需要用的也要買回來。\n( )⑤養成隨手關燈和水龍頭的習慣。",
+                "question": "2. 看圖回答問題，請將正確答案的代號填入( )中。\n(3) 能被磁鐵吸引的物品，有什麼共同的特點？( )",
                 "options": null
             },
             {
-                "section": "七、活用題",
-                "displayId": "2",
-                "preamble": null,
-                "question": "2. 下列哪些項目是家庭功能的好處?請在正確的( )中打ˇ,錯誤的打✕。\n( )①生病時有家人照顧。\n( )②兄弟姐妹間互相學習。\n( )③可以沒節制的花錢。\n( )④沒有好處,和家人相處只會浪費時間。\n( )⑤家人可以一起分擔家事,共同為家庭付出。",
-                "options": null
-            },
-            {
-                "section": "七、活用題",
+                "section": "填填看",
                 "displayId": "3",
-                "preamble": null,
-                "question": "3. 家庭的組成成員,可能會因為某些原因而改變。在面對家庭的改變時,下列哪些態度或行為是正確的?正確的請在( )中打ˇ,錯誤的打✕。\n( )①和育幼院的小朋友快樂的玩在一起。\n( )②媽媽在洗碗時,我會幫忙收碗筷。\n( )③和收養自己的爸媽相親相愛。\n( )④和育幼院的小朋友們吵架、搶玩具。\n( )⑤爸媽在外地工作時,整天哭著找爸媽。",
+                "preamble": "(1) ( )\n(2) ( )\n(3) ( )\n(4) ( )",
+                "question": "3. 請在下圖空格中，填入正確的花朵構造名稱。\n(1) ( )\n(2) ( )\n(3) ( )\n(4) ( )",
                 "options": null
+            },
+            {
+                "section": "填填看",
+                "displayId": "4",
+                "preamble": "甲 磁力  乙 風力\n丙 浮力  丁 彈力",
+                "question": "4. 下列生活中的例子，分別是運用了哪一種力？請在( )中填入代號。\n( )(1) 風車轉動\n( )(2) 用浮板來游泳\n( )(3) 門擋上的磁鐵\n( )(4) 風箏到處飄揚\n( )(5) 用橡皮筋綁住物品\n( )(6) 郵輪在海面上航行\n( )(7) 原子筆的筆心縮回",
+                "options": null
+            },
+            {
+                "section": "連連看",
+                "displayId": "1",
+                "preamble": "(1) 樹幹圖片\n(2) 葉片圖片\n(3) 莖與分枝圖片\n(4) 軸根圖片\n\n• 甲 根\n• 乙 莖\n• 丙 葉",
+                "question": "請判斷下列圖片分別屬於植物的哪一個構造？請連出正確的答案。\n(1) 樹幹圖片 —— ( )\n(2) 葉片圖片 —— ( )\n(3) 莖與分枝圖片 —— ( )\n(4) 軸根圖片 —— ( )",
+                "options": null
+            },
+            {
+                "section": "活用題",
+                "displayId": "1",
+                "preamble": "甲磁鐵 [ N | S ]\n乙磁鐵 [ (  ) | (  ) ]",
+                "question": "如下圖，甲磁鐵的一端和乙磁鐵的一端靠近時會互相排斥，請根據提示，幫乙磁鐵填入正確的磁極名稱。\n上面 ( )\n下面 ( )",
+                "options": null
+            },
+            {
+                "section": "閱讀題組",
+                "displayId": "1-(1)",
+                "preamble": "楊甘陵30歲時，才投入樹木醫治、義診的工作，68歲時，遠赴日本，經過長達14天的測驗，取得「樹醫師」執照。\n楊醫師診療「樹病人」的方法相當科學，診療箱裡有聽診器、測量土壤酸鹼值和樹葉葉綠素含量的儀器。他說：「樹木生病的原因有人為傷害、病蟲害、獸害及氣象傷害，其中以人為傷害最多。」楊醫師痛心的說：「水泥地和柏油路會使水無法滲入土壤，樹木會因為吸收不到土壤裡的水分和養分而死亡。」他呼籲大家要愛護樹木，因為沒有了樹木，人類將難以生存。",
+                "question": "( )(1) 樹木生病的原因以哪一種傷害最多？",
+                "options": [
+                    "① 病害",
+                    "② 氣象傷害",
+                    "③ 人為傷害",
+                    "④ 病蟲害和獸害"
+                ]
+            },
+            {
+                "section": "閱讀題組",
+                "displayId": "1-(2)",
+                "preamble": null,
+                "question": "( )(2) 「樹醫師」楊甘陵的診療箱中沒有哪一種儀器？",
+                "options": [
+                    "① 血壓計",
+                    "② 聽診器",
+                    "③ 土壤酸鹼值測量器",
+                    "④ 葉綠素含量測量器"
+                ]
             }
         ];
-
         let currentQuestionIndex = 0;
         let currentPreamble = null;
         const synth = window.speechSynthesis;
         let utterance = null;
         let voices = [];
-        const preambleEl = document.getElementById('preamble-text');
-        const questionEl = document.getElementById('question-text');
+        let preambleEl = document.getElementById('preamble-text');
+        let questionEl = document.getElementById('question-text');
         const optionsEl = document.getElementById('options-list');
         const selectEl = document.getElementById('question-select');
         const voiceSelectEl = document.getElementById('voice-select');
@@ -768,7 +736,7 @@
                 .replace(/\^\\circ/g, '°')
                 .replace(/\\\^/g, '^')
                 .replace(/\\pi/g, 'π')
-                .replace(/\\theta/g, '西塔')
+                .replace(/\\theta/g, 'θ')
                 .replace(/\\triangle/g, '△')
                 .replace(/\\Delta/g, '△')
                 .replace(/\\angle/g, '∠')
@@ -832,39 +800,24 @@
             cleaned = cleaned.replace(/的3次方/g, '立方');
 
             cleaned = cleaned.replace(/([\d\w)]+)\s*[:：]\s*([\d\w(]+)/g, '$1比$2');
+
             cleaned = cleaned.replace(/\$/g, '').replace(/\\/g, '');
             return cleaned;
         }
 
         function populateVoiceList() {
-            if (!synth) return;
             voices = synth.getVoices().filter(voice => voice.lang.startsWith('zh'));
             voiceSelectEl.innerHTML = '';
-            if (voices.length === 0) { 
-                const o = document.createElement('option'); 
-                o.textContent = '預設語音'; 
-                voiceSelectEl.appendChild(o); 
-                return; 
-            }
-            voices.forEach((voice, i) => { 
-                const o = document.createElement('option'); 
-                o.textContent = voice.name; 
-                o.value = i; 
-                voiceSelectEl.appendChild(o); 
-            });
+            if (voices.length === 0) { const o = document.createElement('option'); o.textContent = '找不到中文語音'; voiceSelectEl.appendChild(o); return; }
+            voices.forEach((voice, i) => { const o = document.createElement('option'); o.textContent = voice.name; o.value = i; voiceSelectEl.appendChild(o); });
             let idx = voices.findIndex(v => v.name.includes('Yating') && v.lang === 'zh-TW');
-            if (idx === -1) idx = voices.findIndex(v => v.name.includes('Google') && v.lang.includes('TW'));
-            if (idx === -1) idx = voices.findIndex(v => v.lang.includes('TW'));
+            if (idx === -1) idx = voices.findIndex(v => v.name === 'Google 國語（臺灣）');
             if (idx === -1) idx = 0;
             if (voices[idx]) { voiceSelectEl.selectedIndex = idx; }
         }
-        
-        if (synth && synth.onvoiceschanged !== undefined) { 
-            synth.onvoiceschanged = populateVoiceList; 
-        }
+        if (synth.onvoiceschanged !== undefined) { synth.onvoiceschanged = populateVoiceList; }
 
         function speak(text) {
-            if (!synth) return;
             synth.cancel();
             const cleanText = cleanTextForTTS(text);
             const u = new SpeechSynthesisUtterance(cleanText);
@@ -879,7 +832,7 @@
         function stopSequence() {
             activeSequence = [];
             activeSequenceIndex = -1;
-            if (synth) synth.cancel();
+            synth.cancel();
             document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
             updateReplayButtonState(false);
         }
@@ -977,10 +930,7 @@
         function renderQuestion(index) {
             const q = questions[index];
             const activePreamble = getActivePreamble(index);
-            if (activePreamble !== currentPreamble) { 
-                renderPreamble(activePreamble); 
-                currentPreamble = activePreamble; 
-            }
+            if (activePreamble !== currentPreamble) { renderPreamble(activePreamble); currentPreamble = activePreamble; }
             
             questionEl.innerHTML = '';
             const formattedQuestion = formatMathText(q.question);
@@ -1014,7 +964,7 @@
             }
             const q = questions[currentQuestionIndex];
             const seq = [];
-            if (q.preamble) {
+            if (getActivePreamble(currentQuestionIndex)) {
                 preambleEl.querySelectorAll('span').forEach(span => {
                     seq.push({ text: span.textContent, element: span });
                 });
@@ -1034,25 +984,9 @@
             playNextInSequence();
         }
 
-        selectEl.addEventListener('change', e => { 
-            currentQuestionIndex = parseInt(e.target.value); 
-            stopSequence(); 
-            renderQuestion(currentQuestionIndex); 
-        });
-        prevBtn.addEventListener('click', () => { 
-            if (currentQuestionIndex > 0) { 
-                currentQuestionIndex--; 
-                stopSequence(); 
-                renderQuestion(currentQuestionIndex); 
-            } 
-        });
-        nextBtn.addEventListener('click', () => { 
-            if (currentQuestionIndex < questions.length - 1) { 
-                currentQuestionIndex++; 
-                stopSequence(); 
-                renderQuestion(currentQuestionIndex); 
-            } 
-        });
+        selectEl.addEventListener('change', e => { currentQuestionIndex = parseInt(e.target.value); stopSequence(); renderQuestion(currentQuestionIndex); });
+        prevBtn.addEventListener('click', () => { if (currentQuestionIndex > 0) { currentQuestionIndex--; stopSequence(); renderQuestion(currentQuestionIndex); } });
+        nextBtn.addEventListener('click', () => { if (currentQuestionIndex < questions.length - 1) { currentQuestionIndex++; stopSequence(); renderQuestion(currentQuestionIndex); } });
         replayBtn.addEventListener('click', speakCurrentQuestion);
         
         speedControl.addEventListener('input', e => { 
@@ -1061,7 +995,7 @@
             if (activeSequence.length > 0) {
                 synth.cancel();
                 playNextInSequence();
-            } else if (synth && synth.speaking && utterance) {
+            } else if (synth.speaking && utterance) {
                 const text = utterance.text;
                 synth.cancel();
                 speak(text);
@@ -1084,16 +1018,13 @@
                 }
                 const o = document.createElement('option');
                 o.value = index;
-                o.textContent = '第 ' + q.displayId + ' 題';
+                o.textContent = (q.section === '閱讀題組' ? '題組 ' : '第 ') + q.displayId + ' 題';
                 if (currentOptgroup) currentOptgroup.appendChild(o);
             });
             populateVoiceList();
             renderQuestion(currentQuestionIndex);
         }
-
-        window.onload = function() {
-            init();
-        };
+        init();
     </script>
 </body>
 </html>
