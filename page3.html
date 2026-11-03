@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臺東縣成功鎮三民國小一一五學年度第一學期期中評量試卷 六年級社會領域</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f766e;
+            --primary-light: #e0f2f1;
+            --primary-hover: #115e59;
+            --secondary: #64748b;
+            --secondary-light: #f1f5f9;
+            --secondary-hover: #475569;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --highlight-bg: #fffde7;
+            --highlight-underline: #26a69a;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+        }
+        body {
+            font-family: "LXGW WenKai TC", cursive;
+            background-color: var(--background);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+            margin: 0;
+            -webkit-text-size-adjust: 100%;
+            color: var(--text-main);
+        }
+        #app-container {
+            background-color: var(--surface);
+            width: 100%;
+            max-width: 56rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            background-color: var(--surface);
+            border-bottom: 1px solid var(--border);
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 0.05em;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .nav-pager {
+            display: flex;
+            align-items: center;
+            background-color: var(--secondary-light);
+            border-radius: 0.5rem;
+            padding: 0.25rem;
+            border: 1px solid var(--border);
+        }
+        .nav-pager button {
+            background: none;
+            border: none;
+            color: var(--secondary-hover);
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: 0.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .nav-pager button:hover {
+            background-color: var(--border);
+            color: var(--text-main);
+        }
+        .nav-pager button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        .select-wrapper {
+            position: relative;
+        }
+        .select-wrapper select {
+            appearance: none;
+            -webkit-appearance: none;
+            font-family: inherit;
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 0.375rem;
+            color: var(--text-main);
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.2s;
+            max-width: 180px;
+        }
+        .select-wrapper select:focus {
+            border-color: var(--primary);
+        }
+        .select-wrapper::after {
+            content: "";
+            position: absolute;
+            right: 0.65rem;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 4px solid transparent;
+            border-top-color: var(--text-muted);
+            pointer-events: none;
+        }
+        .select-q select {
+            border: none;
+            background: transparent;
+            font-size: 1rem;
+            padding-right: 1.5rem;
+            max-width: 150px;
+        }
+        .select-q::after {
+            right: 0.4rem;
+        }
+        .btn-primary, .btn-secondary {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.5rem 0.875rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 2px 4px rgb(15 118 110 / 0.1);
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            background-color: var(--secondary-light);
+            color: var(--secondary-hover);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover {
+            background-color: var(--border);
+            color: var(--text-main);
+            transform: translateY(-1px);
+        }
+        .settings-panel {
+            background-color: var(--background);
+            border-bottom: 1px solid var(--border);
+            padding: 0.75rem 1.25rem;
+            transition: max-height 0.3s ease-out, opacity 0.3s, padding 0.3s;
+            max-height: 200px;
+            opacity: 1;
+            overflow: hidden;
+        }
+        .settings-panel.collapsed {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .settings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .control-label {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+        .select-voice select {
+            width: 100%;
+            max-width: 260px;
+        }
+        .speed-slider-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-grow: 1;
+        }
+        #speed-control {
+            flex-grow: 1;
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        #speed-control::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+        }
+        #speed-value {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            min-width: 2.5rem;
+        }
+        #quiz-area {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            min-height: 260px;
+            background-color: var(--surface);
+        }
+        #preamble-text {
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 0.875rem 1.125rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            white-space: pre-wrap;
+        }
+        #preamble-text p {
+            margin: 0 0 0.75rem 0;
+        }
+        #preamble-text p:last-child {
+            margin: 0;
+        }
+        .question-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        #question-text {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            font-weight: 700;
+            color: var(--text-main);
+            white-space: pre-wrap;
+            flex-grow: 1;
+        }
+        #options-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+        .option-item {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            border: 1px solid var(--border);
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            background-color: var(--surface);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .option-item:hover, #preamble-text span:hover, #question-text span.non-option:hover {
+            background-color: var(--highlight-bg);
+            border-color: var(--primary);
+        }
+        .speaking, .speaking:hover {
+            text-decoration: underline;
+            text-decoration-color: var(--highlight-underline);
+            text-decoration-thickness: 3px;
+            background-color: var(--highlight-bg);
+        }
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            border-top: 1px solid var(--border);
+            background-color: var(--background);
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .footer-text {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 0.25rem;
+            }
+            #app-container {
+                border-radius: 0.5rem;
+            }
+            .navbar {
+                padding: 0.5rem 0.75rem;
+            }
+            .logo {
+                font-size: 1.15rem;
+            }
+            .nav-pager {
+                padding: 0.125rem;
+            }
+            .select-wrapper select {
+                font-size: 0.85rem;
+                padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+            }
+            .select-q select {
+                max-width: 100px;
+            }
+            .btn-primary, .btn-secondary {
+                padding: 0.375rem 0.65rem;
+                font-size: 0.85rem;
+            }
+            .btn-primary span {
+                display: none;
+            }
+            #quiz-area {
+                padding: 0.75rem;
+                min-height: 200px;
+            }
+            #question-text {
+                font-size: 1.05rem;
+            }
+            .option-item {
+                font-size: 0.95rem;
+                padding: 0.6rem 0.75rem;
+            }
+            footer {
+                padding: 0.5rem 0.75rem;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <header class="navbar">
+            <div class="nav-left">
+                <span class="logo">臺東縣成功鎮三民國小一一五學年度第一學期期中評量試卷 六年級社會領域</span>
+            </div>
+            <div class="nav-right">
+                <div class="nav-pager">
+                    <button id="prev-btn" title="上一題">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+                    </button>
+                    <div class="select-wrapper select-q">
+                        <select id="question-select"></select>
+                    </div>
+                    <button id="next-btn" title="下一題">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                    </button>
+                </div>
+                <button id="replay-btn" class="btn-primary" title="唸題目">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                    <span>唸題目</span>
+                </button>
+                <button id="settings-toggle-btn" class="btn-secondary" title="語音設定">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.17.311c.58.988.006 2.254-1.055 2.502l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.17a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.17-.311a1.464 1.464 0 0 1 1.055-2.502l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.17a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.86z"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <div id="settings-panel" class="settings-panel collapsed">
+            <div class="settings-grid">
+                <div class="control-group">
+                    <label for="voice-select" class="control-label">選擇聲音:</label>
+                    <div class="select-wrapper select-voice">
+                        <select id="voice-select"></select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="speed-control" class="control-label">唸讀速度:</label>
+                    <div class="speed-slider-wrapper">
+                        <input id="speed-control" type="range" min="0.5" max="1.5" step="0.1" value="0.9">
+                        <span id="speed-value">0.9x</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main id="quiz-area">
+            <div id="preamble-text" style="display: none;"></div>
+            <div class="question-header"><div id="question-text"></div></div>
+            <ul id="options-list"></ul>
+        </main>
+
+        <footer>
+            <p class="footer-text">© 2026 spedmix</p>
+        </footer>
+    </div>
+    <script>
+        const questions = [
+            {
+                "section": "一、選擇題",
+                "displayId": "1",
+                "preamble": null,
+                "question": "1. ( )「負責制定、修改法律，例如：表決通過紀念日及節日實施條例，增訂國定假日。」這是下列何者所負責的事務？",
+                "options": [
+                    "①總統",
+                    "②行政院",
+                    "③立法院",
+                    "④司法院"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "2",
+                "preamble": null,
+                "question": "2. ( )吳季剛是一名臺裔加拿大籍服裝設計師，他的兒時興趣與其他小男孩較為不同，五歲時便喜歡玩洋娃娃，對婚紗及禮服深深著迷，如今的他已是國際知名的時尚大師。下列何者無法用來詮釋吳季剛的成長故事？",
+                "options": [
+                    "①專注追求自己的目標，不過度在意他人眼光",
+                    "②唯有離鄉背井、出國深造，才能出人頭地",
+                    "③抱持多元與開放的心態，打破刻板印象",
+                    "④個人的職涯規畫不應受性別的限制"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "3",
+                "preamble": null,
+                "question": "3. ( )民國五十年代，名為「巧妻」保溫鍋的廣告，寫著「滿足全家的口福是主婦的驕傲」標語，從家電名稱、廣告標語可以看出當時有怎樣的觀念？",
+                "options": [
+                    "①「滿足全家」強調家庭成員愈多愈好",
+                    "②「滿足」、「口福」強調吃飯很重要",
+                    "③「巧妻」、「驕傲」強調能買電子鍋是不容易的事",
+                    "④「巧妻」、「主婦」強調為家人備餐是女性的責任"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "4",
+                "preamble": null,
+                "question": "4. ( )下列哪一項是臺灣具有地方特色的消災、祈福信仰活動？",
+                "options": [
+                    "①元宵節猜燈謎",
+                    "②迎王平安祭典",
+                    "③聖貝祭",
+                    "④中秋節賞月"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "5",
+                "preamble": null,
+                "question": "5. ( )清帝國時期，漢人從中國來臺開墾，除了帶來家鄉的佛教和民間信仰，還有下列何者？",
+                "options": [
+                    "①道教",
+                    "②天主教",
+                    "③基督教",
+                    "④伊斯蘭教"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "6",
+                "preamble": null,
+                "question": "6. ( )生於嘉義的畫家陳澄波，代表民眾與軍隊調解，最終不幸遭到殺害，是由於哪一起事件的緣故？",
+                "options": [
+                    "①甲午戰爭",
+                    "②二二八事件",
+                    "③美麗島事件",
+                    "④臺灣實施戒嚴"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "7",
+                "preamble": null,
+                "question": "7. ( )隨著歷史發展，臺灣累積許多豐富的文化，下列事物與引進時期的配對，哪一項錯誤？",
+                "options": [
+                    "①陶壺→大航海時代",
+                    "②鐵路→清帝國時期",
+                    "③神社→日治時期",
+                    "④越南麵包→中華民國在臺灣"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "8",
+                "preamble": null,
+                "question": "8. ( )「國家應依民族意願，保障其地位及政治參與，並對其教育文化、交通水利、衛生醫療、經濟土地及社會福利事業予以保障扶助並促其發展…………」這是憲法對於哪一個族群的權益保障？",
+                "options": [
+                    "①婦女",
+                    "②年長者",
+                    "③新住民",
+                    "④原住民族"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "9",
+                "preamble": null,
+                "question": "9. ( )「公共政策網路參與平臺」是提供人民向政府反映意見的平臺，下列哪一項建議不適合在這個平臺提出？",
+                "options": [
+                    "①男女皆須服兵役，落實性別平等",
+                    "②呼籲政府增進社會安全",
+                    "③知名速食店買一送一的活動應該常常舉辦",
+                    "④建設更多公共運動空間"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "10",
+                "preamble": null,
+                "question": "10. ( )依法律規定，我國幾歲的國民有接受教育的義務？",
+                "options": [
+                    "①3至12歲",
+                    "②6至15歲",
+                    "③3至15歲",
+                    "④6至18歲"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "11",
+                "preamble": null,
+                "question": "11. ( )關於二二八事件的敘述，下列何者正確？",
+                "options": [
+                    "①發生在民國38年",
+                    "②事件發生後，臺灣人民得到擔任公職的機會",
+                    "③事件發生後，政府採納人民的意見進行改革",
+                    "④解嚴後，政府除了訂定紀念日，也與民間團體藉由出版書籍，探討事件過程與真相"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "12",
+                "preamble": null,
+                "question": "12. ( )臺灣早期以農業社會為主，長輩通常希望兒女長大後儘早成家立業，也鼓勵夫妻多生育子女，當時的家庭型態應該以哪一種最多？",
+                "options": [
+                    "①單親家庭",
+                    "②夫妻家庭",
+                    "③單人家庭",
+                    "④三代同堂家庭"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "13",
+                "preamble": null,
+                "question": "13. ( )近年來，陸續有男性通過「托育人員技術士證」檢定，合法擔任保母一職。由此可知，現代社會判斷一個人能否勝任一項工作，下列何者不是主要的依據？",
+                "options": [
+                    "①性別",
+                    "②知識",
+                    "③專業技術",
+                    "④熱忱"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "14",
+                "preamble": null,
+                "question": "14. ( )臺灣歷經不同政權統治，形成現在多元族群的社會，從大航海時代開始，吸引不同族群先後來到臺灣這塊土地的主要原因為何？",
+                "options": [
+                    "①地廣人稀",
+                    "②氣候宜人",
+                    "③地理位置",
+                    "④人才濟濟"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "15",
+                "preamble": null,
+                "question": "15. ( )現今，隨著新住民人口增加，臺灣在哪些方面增添了許多不同的風貌？(甲)風俗文化(乙)飲食習慣(丙)教育程度(丁)節慶活動(戊)性別認同",
+                "options": [
+                    "①甲乙丙",
+                    "②甲乙丁",
+                    "③乙丙戊",
+                    "④乙丁戊"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "16",
+                "preamble": null,
+                "question": "16. ( )臺灣女性能接受教育的時間很晚，從什麼時候開始，臺灣女性才可以接受初等教育、就讀高等女學校甚至是大學？",
+                "options": [
+                    "①清帝國初期",
+                    "②清帝國開港通商後",
+                    "③日治時期",
+                    "④大航海時代"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "17",
+                "preamble": null,
+                "question": "17. ( )自民國111年1月1日起，「保母人員技術士證」更改為「托育人員技術士證」，這個改變的意義在呈現想從事這項工作不應受到哪一種條件限制？",
+                "options": [
+                    "①性別",
+                    "②技術",
+                    "③知識",
+                    "④熱忱"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "18",
+                "preamble": null,
+                "question": "18. ( )年滿20歲的臺灣人民擁有選舉權，可以投票選出認同的候選人，這是憲法賦予人民哪一種權利的表現？",
+                "options": [
+                    "①考試權",
+                    "②自由權",
+                    "③參政權",
+                    "④平等權"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "19",
+                "preamble": null,
+                "question": "19. ( )由於對中國共產黨的戰況緊急，中華民國政府以維護治安、秩序為理由，在哪一年宣布臺灣實施戒嚴？",
+                "options": [
+                    "①民國36年",
+                    "②民國38年",
+                    "③民國76年",
+                    "④民國86年"
+                ]
+            },
+            {
+                "section": "一、選擇題",
+                "displayId": "20",
+                "preamble": null,
+                "question": "20. ( )關於戰後臺灣初期的社會狀況，下列敘述何者正確？",
+                "options": [
+                    "①人民富裕，對政府的治理相當滿意",
+                    "②經濟繁榮，糧食充足，物價平穩",
+                    "③官員軍警清廉，沒有貪汙行為",
+                    "④政府嚴密管控稻米、糖等物資"
+                ]
+            },
+            {
+                "section": "二、配合題",
+                "displayId": "1",
+                "preamble": null,
+                "question": "二、配合題：\n1. 臺灣歷經不同時期的發展，不同族群留下許多各具特色的聚落建築，請將正確的代號填入( )中。\n甲、南投縣日月潭 邵族聚落\n乙、臺北市信義區的「四四南村」\n丙、嘉義市的日式木造建築\n丁、屏東縣萬巒鄉 五溝水客家聚落\n戊、臺南市新化老街\n\n( )①規律整齊的建築形式，便於集體生活與管理。現已改建為眷村文物館。\n( )②受日治時期西方文化的影響，牌樓立面上有西式的華麗裝飾圖案。\n( )③過去原住民族以就地取材的方式搭建的傳統房屋。\n( )④住屋多臨水而建，以傳統三合院建築為主。\n( )⑤是日治時期開發阿里山林場而興建的官方宿舍。",
+                "options": null
+            },
+            {
+                "section": "三、回答問題",
+                "displayId": "1",
+                "preamble": null,
+                "question": "三、回答問題：\n1. 現在身為小學生的你，目前擁有哪些權利？有哪些應盡的義務？\n■擁有的權利：(3分)\n■應盡的義務：(1分)",
+                "options": null
+            },
+            {
+                "section": "三、回答問題",
+                "displayId": "2",
+                "preamble": null,
+                "question": "2. 慈莉和同學正在整理民主國家政府為民服務的報告內容，老師發現在他們的討論過程中，有兩位同學的說法是錯誤的，請你幫忙找出來並寫出正確的說法。\n\n慈莉：你們認為什麼才是民主國家的政府會有的作為或具備的條件？\n同學甲：我認為傾聽民意的政府才能不斷進步。就像政府設置公共政策網路參與平臺，讓民眾的意見可以被聽見。\n同學乙：我覺得由人民投票選出來的政府官員，他們願意順應民意並依法行事，就可算是民主國家的政府。\n同學丙：我國的中央政府只有五院，地方政府則分為行政機關和立法機關。\n同學丁：我發現中央和地方政府會互相合作，提供人民更安全的生活，例如：中央修訂交通法規，縣市政府落實執法、勸導人民遵守交通規則。\n同學戊：我覺得地方政府中的行政機關會受到立法機關的監督，目的並不是要製造對立，而是要為人民把關。\n同學己：由人民選出的執政者，若執政者施政不當，人民只能默默忍耐，無法反映問題。\n\n我發現說法錯誤的人有：(共6分)\n同學代號 | 正確的說法",
+                "options": null
+            },
+            {
+                "section": "四、勾選題",
+                "displayId": "1",
+                "preamble": null,
+                "question": "四、勾選題：\n1. 關於政府施政的敘述，下列哪些正確？請在□中打V。\n\n□ ①政府為了實施政策，即使影響到部分人民的權益，也不需要提供任何救助或申訴的管道。\n□ ②我國中央政府與地方政府都設立了電話專線來即時回應民眾意見。\n□ ③總統、行政院、立法院、司法院、考試院與監察院都屬於我國的中央政府，負責全國性的公共事務。\n□ ④地方立法機關由民意代表組成，負責審議地方法規、監督地方行政機關施政。\n□ ⑤地方行政機關為各縣市政府，必須依地方需求推動政策、辦理地方事務，與民眾的生活密切相關。",
+                "options": null
+            },
+            {
+                "section": "五、活用題",
+                "displayId": "1",
+                "preamble": null,
+                "question": "五、活用題：\n1. 福平和蕾米知道憲法保障人民的權利與義務，卻也有些迷思和疑惑。文章中有些段落寫錯了，請協助他們從①~⑥找出錯誤的內容，並在表格中寫出正確的答案。\n\n福平和蕾米是國小六年級的學生，雖然他們年紀還小，但已經規畫好自己的未來。\n福平計畫在高中畢業後，就要離開家鄉，獨自去外縣市就讀理想的大學。因為憲法保障「①就業權」，到時候他可以依據自己的需求選擇適合居住的地方。等到大學畢業後，他會到軍隊接受軍事訓練，因為「②納稅」是國民的責任，可以保護國家、保障人民生命和財產安全。\n蕾米和福平聊到快要選舉了，蕾米說未來等她年滿二十歲，就可以在選舉時，投票給自己認同的縣市長候選人，福平說這就是因為憲法保障人民擁有「③參政權」。\n福平又說縣市長當選後，為了服務人民，政府的公共建設、道路興建等都需要經費，所以他的爸爸和媽媽每年都要按時「④投票」給政府。\n這時蕾米提到她班上有一位同學是視障生，每逢考試時，學校老師會特別為他準備放大印製的考卷，這是為了確保他和其他同學都享有「⑤平等權」，能讓他順利完成考試。福平說他和堂哥現在分別在國小及國中念書學習，這是因為我國六至十五歲的國民都要「⑥接受國民教育」，讓國民增長知識與思考能力，身心發展得更健康。\n福平和蕾米這才發現，原來生活中充滿了人民享有的權利與應盡的義務。\n\n錯誤內容編號 | 正確答案 | 屬於權利或義務\n[  ] | [  ] | □權利  □義務\n[  ] | [  ] | □權利  □義務\n[  ] | [  ] | □權利  □義務",
+                "options": null
+            },
+            {
+                "section": "閱讀題組",
+                "displayId": "六-1-(一)",
+                "preamble": "六、題組題：\n1. 慈莉和家人出國旅行，在機場看見警察舉著字牌，提醒人們不要受詐騙集團欺騙。警察發現數名詐騙集團分子，並立即逮捕。她還觀察到政府為了國人的生命安全，會分工合作遏止犯罪行為。下列是慈莉在生活及新聞中看到的政府作為。\n\n甲、負責制定或修改防止詐騙的法律。\n【圖示：法律大全】\n\n乙、司法院所屬的各級法院開庭審判違法的詐騙集團分子。\n【圖示：法庭審判】\n\n丙、市政府網站公告詐騙集團的相關話術與手法，提醒民眾小心。\n【圖示：電視畫面「出國高薪工作小心 淪為詐騙共犯 和平市調查處檢舉專線03-3451234」】\n\n丁、規畫國家防止詐騙的政策，並要求機場的警察加強宣導。\n【圖示：警察舉牌「海外打工 詐騙陷阱」】\n\n戊、在縣政府警察局可以看到宣傳「出國高薪工作可能是詐騙」的海報。\n【圖示：警察局立牌宣導海報】",
+                "question": "(一)請依據以上內容，判斷哪些是中央政府或地方政府的工作內容？(請填代號) (3分)\n中央政府：\n地方政府：",
+                "options": null
+            },
+            {
+                "section": "閱讀題組",
+                "displayId": "六-1-(二)",
+                "preamble": null,
+                "question": "(二)下列是慈莉針對政府在「詐騙事件」中所做的判斷與思考，哪些內容正確？請在□中打V。(可複選) (2分)\n\n□ 1.中央政府加強宣導打工詐騙的問題，而地方政府也配合執行。\n□ 2.只有中央政府在宣導防止打工詐騙。\n□ 3.地方政府透過不同方式，加強防止打工詐騙的宣導。\n□ 4.中央政府與地方政府的工作內容不同。",
+                "options": null
+            },
+            {
+                "section": "閱讀題組",
+                "displayId": "六-1-(三)",
+                "preamble": null,
+                "question": "(三)如果你是在機場被警察提醒出國要小心詐騙的民眾，想一想警察為什麼要這樣說明與要求？ (3分)",
+                "options": null
+            },
+            {
+                "section": "閱讀題組",
+                "displayId": "六-2-(一)",
+                "preamble": "2. 奕方從課本認識臺灣的聚落建築後，他發現屏東縣萬巒鄉萬金村有座古老的教堂建築，他上網查了一些資料。\n\n萬金天主教堂(萬金聖母聖殿)\n清帝國時期，西班牙籍的郭德剛神父以土塊建立了萬金天主教堂。因為傳教士的勤勉傳教，加上居民對天主教的接受程度高，使得萬金村成為臺灣少數以天主教教徒為主的聚落。\n走近一看，萬金天主教堂的西班牙古堡式建築，融合了閩南建築的特色——花崗岩石牌、對聯等設計，既展現出宗教的意涵，也融合了本土色彩。\n\n【圖片：萬金天主教堂外觀】\n【圖片：刻上天主堂、奉旨的花崗岩石牌。 (文字：聖母聖殿 / 奉旨)】\n【圖片：室內牆壁上的對聯設計。 (文字：我是生命之糧 / 領者必獲永生)】",
+                "question": "(一)萬金天主教堂是在哪一個時期由誰興建的？請在□中打V。(每答1分)",
+                "options": [
+                    "□ 1.大航海時代的貿易商。",
+                    "□ 2.清帝國時期的傳教士。",
+                    "□ 3.日治時期的總督府。",
+                    "□ 4.中華民國時期的鄉長。"
+                ]
+            },
+            {
+                "section": "閱讀題組",
+                "displayId": "六-2-(二)",
+                "preamble": null,
+                "question": "(二)根據這篇文章，我們可以從哪裡發現文化交流的現象？ (3分)",
+                "options": null
+            },
+            {
+                "section": "閱讀題組",
+                "displayId": "六-2-(三)",
+                "preamble": null,
+                "question": "(三)萬金天主教堂融合了閩南建築的特色，對於當時傳教有什麼幫助？ (3分)",
+                "options": null
+            }
+        ];
+        let currentQuestionIndex = 0;
+        let currentPreamble = null;
+        const synth = window.speechSynthesis;
+        let utterance = null;
+        let voices = [];
+        let preambleEl = document.getElementById('preamble-text');
+        let questionEl = document.getElementById('question-text');
+        const optionsEl = document.getElementById('options-list');
+        const selectEl = document.getElementById('question-select');
+        const voiceSelectEl = document.getElementById('voice-select');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const replayBtn = document.getElementById('replay-btn');
+        const speedControl = document.getElementById('speed-control');
+        const speedValue = document.getElementById('speed-value');
+        const settingsToggleBtn = document.getElementById('settings-toggle-btn');
+        const settingsPanel = document.getElementById('settings-panel');
+
+        const playIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>`;
+        const stopIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5z"/></svg>`;
+
+        let activeSequence = [];
+        let activeSequenceIndex = -1;
+
+        function formatMathText(text) {
+            if (!text) return '';
+            let formatted = text
+                .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '($1)/($2)')
+                .replace(/\\times/g, ' × ')
+                .replace(/\\div/g, ' ÷ ')
+                .replace(/\\pm/g, ' ± ')
+                .replace(/\\le/g, ' ≤ ')
+                .replace(/\\ge/g, ' ≥ ')
+                .replace(/\\neq/g, ' ≠ ')
+                .replace(/\\approx/g, ' ≈ ')
+                .replace(/\\degree/g, '°')
+                .replace(/\^\\circ/g, '°')
+                .replace(/\\\^/g, '^')
+                .replace(/\\pi/g, 'π')
+                .replace(/\\theta/g, 'θ')
+                .replace(/\\triangle/g, '△')
+                .replace(/\\Delta/g, '△')
+                .replace(/\\angle/g, '∠')
+                .replace(/\\parallel/g, '∥')
+                .replace(/\\perp/g, '⊥')
+                .replace(/\\sim/g, '∽')
+                .replace(/\\cong/g, '≅')
+                .replace(/\\odot/g, '⊙')
+                .replace(/\\sqrt\{([^}]+)\}/g, '√($1)');
+            
+            const superscripts = {
+                '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', 
+                '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹',
+                '+': '⁺', '-': '⁻', 'n': 'ⁿ', 'x': 'ˣ', 'y': 'ʸ'
+            };
+            formatted = formatted.replace(/\^\{?([0-9+-nxy]+)\}?/g, (match, p1) => {
+                return p1.split('').map(char => superscripts[char] || char).join('');
+            });
+            
+            formatted = formatted.replace(/\$/g, '');
+            return formatted;
+        }
+
+        function cleanTextForTTS(text) {
+            if (!text) return '';
+            let cleaned = text;
+            
+            cleaned = cleaned
+                .replace(/\\times/g, '乘以')
+                .replace(/\\div/g, '除以')
+                .replace(/×/g, '乘以')
+                .replace(/÷/g, '除以')
+                .replace(/\\pm/g, '正負')
+                .replace(/\\le/g, '小於或等於')
+                .replace(/\\ge/g, '大於或等於')
+                .replace(/\\neq/g, '不等於')
+                .replace(/\\approx/g, '約等於')
+                .replace(/\\degree/g, '度')
+                .replace(/\^\\circ/g, '度')
+                .replace(/\\pi/g, '圓周率')
+                .replace(/\\theta/g, '西塔')
+                .replace(/\\triangle/g, '三角形')
+                .replace(/\\Delta/g, '三角形')
+                .replace(/\\angle/g, '角')
+                .replace(/\\parallel/g, '平行')
+                .replace(/\\perp/g, '垂直')
+                .replace(/\\sim/g, '相似於')
+                .replace(/\\cong/g, '全等於')
+                .replace(/\\odot/g, '圓')
+                .replace(/\\sqrt\{([^}]+)\}/g, '根號$1')
+                .replace(/=/g, '等於')
+                .replace(/＝/g, '等於');
+
+            cleaned = cleaned.replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '$2分之$1');
+            cleaned = cleaned.replace(/\(([^)]+)\)\/\(([^)]+)\)/g, '$2分之$1');
+            cleaned = cleaned.replace(/(\d+)\/(\d+)/g, '$2分之$1');
+
+            cleaned = cleaned.replace(/\^\{([^}]+)\}/g, '的$1次方');
+            cleaned = cleaned.replace(/\^([a-zA-Z0-9]+)/g, '的$1次方');
+            cleaned = cleaned.replace(/的2次方/g, '平方');
+            cleaned = cleaned.replace(/的3次方/g, '立方');
+
+            cleaned = cleaned.replace(/([\d\w)]+)\s*[:：]\s*([\d\w(]+)/g, '$1比$2');
+
+            cleaned = cleaned.replace(/\$/g, '').replace(/\\/g, '');
+            return cleaned;
+        }
+
+        function populateVoiceList() {
+            voices = synth.getVoices().filter(voice => voice.lang.startsWith('zh'));
+            voiceSelectEl.innerHTML = '';
+            if (voices.length === 0) { const o = document.createElement('option'); o.textContent = '找不到中文語音'; voiceSelectEl.appendChild(o); return; }
+            voices.forEach((voice, i) => { const o = document.createElement('option'); o.textContent = voice.name; o.value = i; voiceSelectEl.appendChild(o); });
+            let idx = voices.findIndex(v => v.name.includes('Yating') && v.lang === 'zh-TW');
+            if (idx === -1) idx = voices.findIndex(v => v.name === 'Google 國語（臺灣）');
+            if (idx === -1) idx = 0;
+            if (voices[idx]) { voiceSelectEl.selectedIndex = idx; }
+        }
+        if (synth.onvoiceschanged !== undefined) { synth.onvoiceschanged = populateVoiceList; }
+
+        function speak(text) {
+            synth.cancel();
+            const cleanText = cleanTextForTTS(text);
+            const u = new SpeechSynthesisUtterance(cleanText);
+            u.lang = 'zh-TW';
+            u.rate = parseFloat(speedControl.value);
+            const i = voiceSelectEl.value;
+            if (voices[i]) u.voice = voices[i];
+            utterance = u;
+            synth.speak(u);
+        }
+
+        function stopSequence() {
+            activeSequence = [];
+            activeSequenceIndex = -1;
+            synth.cancel();
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            updateReplayButtonState(false);
+        }
+
+        function updateReplayButtonState(isPlaying) {
+            if (isPlaying) {
+                replayBtn.innerHTML = stopIcon + '<span>停止</span>';
+                replayBtn.title = "停止唸讀";
+                replayBtn.classList.remove('btn-primary');
+                replayBtn.classList.add('btn-secondary');
+            } else {
+                replayBtn.innerHTML = playIcon + '<span>唸題目</span>';
+                replayBtn.title = "唸題目";
+                replayBtn.classList.remove('btn-secondary');
+                replayBtn.classList.add('btn-primary');
+            }
+        }
+
+        function playNextInSequence() {
+            if (activeSequenceIndex < 0 || activeSequenceIndex >= activeSequence.length) {
+                stopSequence();
+                return;
+            }
+            const item = activeSequence[activeSequenceIndex];
+            document.querySelectorAll('.speaking').forEach(el => el.classList.remove('speaking'));
+            item.element.classList.add('speaking');
+            
+            item.element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            const cleanText = cleanTextForTTS(item.text);
+            const u = new SpeechSynthesisUtterance(cleanText);
+            u.lang = 'zh-TW';
+            u.rate = parseFloat(speedControl.value);
+            const i = voiceSelectEl.value;
+            if (voices[i]) u.voice = voices[i];
+
+            u.onend = () => {
+                activeSequenceIndex++;
+                playNextInSequence();
+            };
+            u.onerror = () => {
+                activeSequenceIndex++;
+                playNextInSequence();
+            };
+            utterance = u;
+            synth.speak(u);
+        }
+
+        function speakAndHighlight(text, element) {
+            stopSequence();
+            element.classList.add('speaking');
+            const cleanText = cleanTextForTTS(text);
+            const u = new SpeechSynthesisUtterance(cleanText);
+            u.lang = 'zh-TW';
+            u.rate = parseFloat(speedControl.value);
+            const i = voiceSelectEl.value;
+            if (voices[i]) u.voice = voices[i];
+
+            const cleanup = () => { element.classList.remove('speaking'); u.onend = null; u.onerror = null; };
+            u.onend = cleanup;
+            u.onerror = cleanup;
+            
+            utterance = u;
+            synth.speak(u);
+        }
+
+        function renderPreamble(text) {
+            preambleEl.innerHTML = '';
+            if (!text) { preambleEl.style.display = 'none'; return; }
+            preambleEl.style.display = 'block';
+            const formattedText = formatMathText(text);
+            formattedText.split('\n').filter(p => p.trim() !== '').forEach(pText => {
+                const pEl = document.createElement('p');
+                (pText.match(/[^。？！…，,]+([。？！…，,]|…{2,})?/g) || [pText]).forEach(sText => {
+                    const span = document.createElement('span');
+                    span.textContent = sText;
+                    span.addEventListener('click', e => speakAndHighlight(e.currentTarget.textContent, e.currentTarget));
+                    pEl.appendChild(span);
+                });
+                preambleEl.appendChild(pEl);
+            });
+        }
+
+        function getActivePreamble(index) {
+            const q = questions[index];
+            if (q.preamble) return q.preamble;
+            for (let i = index - 1; i >= 0; i--) {
+                const prevQ = questions[i];
+                if (prevQ.section !== q.section) break;
+                if (prevQ.preamble) return prevQ.preamble;
+            }
+            return null;
+        }
+
+        function renderQuestion(index) {
+            const q = questions[index];
+            const activePreamble = getActivePreamble(index);
+            if (activePreamble !== currentPreamble) { renderPreamble(activePreamble); currentPreamble = activePreamble; }
+            
+            questionEl.innerHTML = '';
+            const formattedQuestion = formatMathText(q.question);
+            formattedQuestion.split('\n').flatMap(line => line.match(/[^。？！…，,]+([。？！…，,]|…{2,})?/g) || [line]).forEach(sText => {
+                if (sText.trim() === '') return;
+                const span = document.createElement('span');
+                span.className = 'non-option';
+                span.textContent = sText;
+                span.addEventListener('click', e => speakAndHighlight(e.currentTarget.textContent, e.currentTarget));
+                questionEl.appendChild(span);
+            });
+            optionsEl.innerHTML = '';
+            if (q.options && q.options.length > 0) {
+                q.options.forEach(optText => {
+                    const li = document.createElement('li');
+                    li.className = 'option-item';
+                    li.textContent = formatMathText(optText);
+                    li.addEventListener('click', e => speakAndHighlight(e.currentTarget.textContent, e.currentTarget));
+                    optionsEl.appendChild(li);
+                });
+            }
+            selectEl.value = index;
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === questions.length - 1;
+        }
+
+        function speakCurrentQuestion() {
+            if (activeSequence.length > 0) {
+                stopSequence();
+                return;
+            }
+            const q = questions[currentQuestionIndex];
+            const seq = [];
+            if (q.preamble) {
+                preambleEl.querySelectorAll('span').forEach(span => {
+                    seq.push({ text: span.textContent, element: span });
+                });
+            }
+            questionEl.querySelectorAll('span.non-option').forEach(span => {
+                seq.push({ text: span.textContent, element: span });
+            });
+            if (q.options) {
+                optionsEl.querySelectorAll('li.option-item').forEach(li => {
+                    seq.push({ text: li.textContent, element: li });
+                });
+            }
+            if (seq.length === 0) return;
+            activeSequence = seq;
+            activeSequenceIndex = 0;
+            updateReplayButtonState(true);
+            playNextInSequence();
+        }
+
+        selectEl.addEventListener('change', e => { currentQuestionIndex = parseInt(e.target.value); stopSequence(); renderQuestion(currentQuestionIndex); });
+        prevBtn.addEventListener('click', () => { if (currentQuestionIndex > 0) { currentQuestionIndex--; stopSequence(); renderQuestion(currentQuestionIndex); } });
+        nextBtn.addEventListener('click', () => { if (currentQuestionIndex < questions.length - 1) { currentQuestionIndex++; stopSequence(); renderQuestion(currentQuestionIndex); } });
+        replayBtn.addEventListener('click', speakCurrentQuestion);
+        
+        speedControl.addEventListener('input', e => { 
+            const s = parseFloat(e.target.value); 
+            speedValue.textContent = s.toFixed(1) + 'x'; 
+            if (activeSequence.length > 0) {
+                synth.cancel();
+                playNextInSequence();
+            } else if (synth.speaking && utterance) {
+                const text = utterance.text;
+                synth.cancel();
+                speak(text);
+            }
+        });
+        
+        settingsToggleBtn.addEventListener('click', () => {
+            settingsPanel.classList.toggle('collapsed');
+        });
+
+        function init() {
+            selectEl.innerHTML = '';
+            let currentSection = "", currentOptgroup = null;
+            questions.forEach((q, index) => {
+                if (q.section !== currentSection) {
+                    currentSection = q.section;
+                    currentOptgroup = document.createElement('optgroup');
+                    currentOptgroup.label = currentSection;
+                    selectEl.appendChild(currentOptgroup);
+                }
+                const o = document.createElement('option');
+                o.value = index;
+                o.textContent = '第 ' + q.displayId + ' 題';
+                if (currentOptgroup) currentOptgroup.appendChild(o);
+            });
+            populateVoiceList();
+            renderQuestion(currentQuestionIndex);
+        }
+        init();
+    </script>
+</body>
+</html>
